@@ -47,7 +47,7 @@ export const SleepStatsTab: React.FC<SleepStatsTabProps> = ({ sleepRecords }) =>
                   tickFormatter={(value) => formatDuration(value)}
                 />
                 <Tooltip 
-                  formatter={(value, name) => [formatDuration(value as number), 'Duration']}
+                  formatter={(value) => [formatDuration(value as number), 'Duration']}
                   labelFormatter={(label) => `Date: ${label}`}
                 />
                 <Legend />
@@ -65,7 +65,7 @@ export const SleepStatsTab: React.FC<SleepStatsTabProps> = ({ sleepRecords }) =>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Avg Sleep Quality</p>
-                    <p className="text-2xl font-bold">{avgQuality.toFixed(1)}/5</p>
+                    <p className="text-2xl font-bold">{avgQuality.toFixed(1)}/3</p>
                   </div>
                 </div>
               </CardContent>
